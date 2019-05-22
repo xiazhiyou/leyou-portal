@@ -7,7 +7,14 @@
   - [2.5 vue-cli](https://mp.csdn.net/mdeditor/90407643#25_vuecli_76)
   - [2.4 Vuetify](https://mp.csdn.net/mdeditor/90407643#24_Vuetify_89)
 
+## 项目启动：live-server --port=9002
+
+界面：
+
+![img](https://img-blog.csdnimg.cn/20190520152807473.png?) 
+
 # 1. 架构概述
+
 前端有一套完整的技术栈，将来会去做独立的部署。
 
 架构图如下：![在这里插入图片描述](https://img-blog.csdnimg.cn/20190521153200324.png?)
@@ -29,7 +36,7 @@
   - 前端购物系统
 &ensp;  &ensp; 面向用户这一套，采用结合Vue用NUXT服务端渲染（不能采用单应用，原因：单应用请求性能较差，首次加载的速度较慢，不方便做缓存与页面静态化；而NUXT服务端渲染可以做页面静态化，页面的访问效率较高，利于SEO的优化）
 
-	管哪种，将来都是通过ajax与后台进行交互。统一访问同一个微服务集群	
+	不管哪种，将来都是通过ajax与后台进行交互。统一访问同一个微服务集群	
 	们的后台管理系统 部署在nginx上，nginx是一个web服务器，部署前端代码，前端的静态资源都放在nginx上，与后端产生交互，后端的入口（即微服务集群的入口）是zuul，到了zuul，ribbon再做负载均衡与hystix	失败容错	去访问微服务群，微服务群会注册到eureka上去，同时，微服务之间要进行通信使用rabbitmq做一个异步通信，同步调用采用feign实现
 
 # 2. 技术解读
@@ -77,6 +84,7 @@ SPA: Single Page Application，单应用，整个后台管理系统只有一个h
 ## 2.4 Webpack
 Webpack：一个前端资源的打包工具，它可以将js、image、css等资源当成一个模块进行打包。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190521154731102.png?)
+
 为什么需要打包？
 
 - 将许多碎小文件打包成一个整体，减少单页面内的衍生请求次数，提高网站效率。
