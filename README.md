@@ -1,4 +1,14 @@
-﻿@[TOC](商城前端介绍：)
+- [1. 架构概述](https://mp.csdn.net/mdeditor/90407643#1__1)
+
+- [2. 技术解读](https://mp.csdn.net/mdeditor/90407643#2__26)
+
+- - [2.1 node和npm](https://mp.csdn.net/mdeditor/90407643#21_nodenpm_27)
+  - [2.2 Vue](https://mp.csdn.net/mdeditor/90407643#22_Vue_53)
+  - [2.3 SPA](https://mp.csdn.net/mdeditor/90407643#23_SPA_66)
+  - [2.4 Webpack](https://mp.csdn.net/mdeditor/90407643#24_Webpack_68)
+  - [2.5 vue-cli](https://mp.csdn.net/mdeditor/90407643#25_vuecli_76)
+  - [2.4 Vuetify](https://mp.csdn.net/mdeditor/90407643#24_Vuetify_89)
+
 # 1. 架构概述
 前端有一套完整的技术栈，将来会去做独立的部署。
 
@@ -7,8 +17,8 @@
 1.基于node，在node的基础上有npm和webpack，主要用于项目构建管理。
   - npm：项目的依赖管理
   - webpack：项目打包和编译
-   &ensp;  两者合起来是maven的功能，但又比maven强大
-   
+      &ensp;  两者合起来是maven的功能，但又比maven强大
+
 2.在此基础上，Vue.js作为前端的主框架，基于Vue，又有两种：
   - vuetify：页面渲染，是一个UI框架，做页面样式。vue.js只负责渲染，没有样式
   - NUXT：服务端渲染(前端的服务端)，即用node搭建服务
@@ -21,8 +31,8 @@
   - 前端购物系统
 &ensp;  &ensp; 面向用户这一套，采用结合Vue用NUXT服务端渲染（不能采用单应用，原因：单应用请求性能较差，首次加载的速度较慢，不方便做缓存与页面静态化；而NUXT服务端渲染可以做页面静态化，页面的访问效率较高，利于SEO的优化）
 
-不管哪种，将来都是通过ajax与后台进行交互。统一访问同一个微服务集群	
-我们的后台管理系统 部署在nginx上，nginx是一个web服务器，部署前端代码，前端的静态资源都放在nginx上，与后端产生交互，后端的入口（即微服务集群的入口）是zuul，到了zuul，ribbon再做负载均衡与hystix	失败容错	去访问微服务群，微服务群会注册到eureka上去，同时，微服务之间要进行通信使用rabbitmq做一个异步通信，同步调用采用feign实现
+	管哪种，将来都是通过ajax与后台进行交互。统一访问同一个微服务集群	
+	们的后台管理系统 部署在nginx上，nginx是一个web服务器，部署前端代码，前端的静态资源都放在nginx上，与后端产生交互，后端的入口（即微服务集群的入口）是zuul，到了zuul，ribbon再做负载均衡与hystix	失败容错	去访问微服务群，微服务群会注册到eureka上去，同时，微服务之间要进行通信使用rabbitmq做一个异步通信，同步调用采用feign实现
 
 # 2. 技术解读
 ## 2.1 node和npm
