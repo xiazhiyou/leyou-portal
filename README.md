@@ -2,8 +2,9 @@
 
 - [2. 技术解读](https://mp.csdn.net/mdeditor/90407643#2__26)
 
-- - [2.1 node和npm](https://mp.csdn.net/mdeditor/90407643#21_nodenpm_27)
-  - [2.2 Vue](https://mp.csdn.net/mdeditor/90407643#22_Vue_53)
+  - [2.1 node和npm](https://mp.csdn.net/mdeditor/90407643#21_nodenpm_27)
+
+- - [2.2 Vue](https://mp.csdn.net/mdeditor/90407643#22_Vue_53)
   - [2.3 SPA](https://mp.csdn.net/mdeditor/90407643#23_SPA_66)
   - [2.4 Webpack](https://mp.csdn.net/mdeditor/90407643#24_Webpack_68)
   - [2.5 vue-cli](https://mp.csdn.net/mdeditor/90407643#25_vuecli_76)
