@@ -1,11 +1,4 @@
-- [1. 架构概述](https://mp.csdn.net/mdeditor/90407643#1__1)
-- [2. 技术解读](https://mp.csdn.net/mdeditor/90407643#2__26)
-  - [2.1 node和npm](https://mp.csdn.net/mdeditor/90407643#21_nodenpm_27)
-  - [2.2 Vue](https://mp.csdn.net/mdeditor/90407643#22_Vue_53)
-  - [2.3 SPA](https://mp.csdn.net/mdeditor/90407643#23_SPA_66)
-  - [2.4 Webpack](https://mp.csdn.net/mdeditor/90407643#24_Webpack_68)
-  - [2.5 vue-cli](https://mp.csdn.net/mdeditor/90407643#25_vuecli_76)
-  - [2.4 Vuetify](https://mp.csdn.net/mdeditor/90407643#24_Vuetify_89)
+乐优商城前端综述：<font color="green">博客地址:</font> https://blog.csdn.net/qq_41649078/article/details/90407643
 
 ## 项目启动：live-server --port=9002
 
